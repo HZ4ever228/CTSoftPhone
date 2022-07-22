@@ -165,7 +165,7 @@ static const void *const kQueueKey = &kQueueKey;
                 
                 pjsua_transport_config tcfg;
                 pjsua_transport_config_default(&tcfg);
-                tcfg.port = 7503;
+                tcfg.port = 5060;
                 status = pjsua_transport_create(PJSIP_TRANSPORT_TCP, &tcfg, NULL);
                 status = pjsua_start();
                 if (status != PJ_SUCCESS) {
@@ -177,7 +177,7 @@ static const void *const kQueueKey = &kQueueKey;
             }
             NSString *string1 = @"sip:";
             NSString *string2 = @"@";
-            NSString *string3 = @":7503;transport=tcp";
+            NSString *string3 = @":5060;transport=tcp";
             NSString *string4 = @";transport=tcp";
             NSString *uri = [string1 stringByAppendingString:num];
             NSString *reg = [string2 stringByAppendingString:_host];
@@ -245,7 +245,7 @@ static const void *const kQueueKey = &kQueueKey;
                 //create new ipv6 transport, if it's not yet available
                 pjsua_transport_config tcfg;
                 pjsua_transport_config_default(&tcfg);
-                tcfg.port = 7503;
+                tcfg.port = 5060;
                 pjsua_transport_id transportId;
                 status = pjsua_transport_create(PJSIP_TRANSPORT_TCP6, &tcfg, &transportId);
 
